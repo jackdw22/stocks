@@ -23,10 +23,24 @@ function suggestIt(){
   	}}).then(function(response){
       return response.json();
     }).then(function(json){
+
         let stocks = json.quoteResponse.result;
-        console.log(stocks);
-        console.log(stocks[0]);
+
+        /*
+        To use when API limit is maxed
+        let stocks = [{"quoteType" : "EQUITY"}];
+        */
+        //console.log(stocks);
+        //console.log(stocks[0]);
+        if(stocks.length!==0){
         addIt(stocks);
+        document.getElementById("enterSymb").innerText = "Enter a symbol:";
+        document.getElementById("enterSymb").style.color = 'black';
+        }
+        else{
+          document.getElementById("enterSymb").innerText = "Enter a valid symbol:";
+          document.getElementById("enterSymb").style.color = 'red';
+        }
         document.getElementById("symbolSearch").value='';
 
     }).catch(function (error) {
@@ -53,7 +67,6 @@ function addIt(stocks){
 
   }
 }
-
 
 function addFund(fund){
 
@@ -375,6 +388,13 @@ function addStock(stock){
   document.getElementById('watchList').append(row);
 }
 
+function clearIt(){
+  let rows = document.getElementsByClassName('tr');
+  for (let i = 1; i<rows.length; i++){
+    rows[i].remove;
+  }
+}
+
 document.getElementById("tSub").addEventListener('click', function(event){
   event.preventDefault();
   suggestIt();
@@ -403,7 +423,6 @@ function makePretty (labelValue) {
     : Math.abs(Number(labelValue));
 
 }
-
 
 function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
