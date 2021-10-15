@@ -13,8 +13,10 @@ let url = 'https://gnews.io/api/v4/top-headlines?max=5&topic=business&lang=en&to
             results += "<h2>Breaking News Today</h2>";
              
             for (let i = 0; i < json.articles.length; i++){
-                results += "<a href='" + json.articles[i].url + "' target='_blank'><h4>" + json.articles[i].title; 
-                results += "</h4><img src='" + json.articles[i].image +"' class = 'img-fluid'></a>"
+                results += "<div class=article>"
+                results += "<a href='" + json.articles[i].url + "' target='_blank'><h6>" + json.articles[i].title; 
+                results += "</h6><img src='" + json.articles[i].image +"' class = 'img-fluid'></a>"
+                results += "</div>"
             }
             document.getElementById('newPage').innerHTML = results; 
         })
@@ -34,15 +36,17 @@ document.getElementById('sumbit1').addEventListener('click', function(event){
         results += "<h2>News about " + value + "</h2>";
          
         for (let i = 0; i < json.articles.length; i++){
-            results += "<a href='" + json.articles[i].url + "' target='_blank'><h4>" + json.articles[i].title; 
-            results += "</h4><img src='" + json.articles[i].image +"' class = 'img-fluid'></a>"
+            results += "<div class=article>"
+            results += "<a href='" + json.articles[i].url + "' target='_blank'><h6>" + json.articles[i].title; 
+            results += "</h6><img src='" + json.articles[i].image +"' class = 'img-fluid'></a>"
+            results += "</div>"
         }
         document.getElementById('newPage').innerHTML = results; 
     })
       
     });
 
-    document.getElementById('sumbit2').addEventListener('click', function(event){
+    document.getElementById('submit2').addEventListener('click', function(event){
         event.preventDefault();
         const value = document.getElementById('search2').value; 
     
@@ -57,8 +61,10 @@ document.getElementById('sumbit1').addEventListener('click', function(event){
             results += "<h2>News about " + value + "</h2>";
              
             for (let i = 0; i < json.articles.length; i++){
-                results += "<a href='" + json.articles[i].url + "' target='_blank'><h4>" + json.articles[i].title; 
-                results += "</h4><img src='" + json.articles[i].image +"' class = 'img-fluid'></a>"
+                results += "<div class=article>"
+                results += "<a href='" + json.articles[i].url + "' target='_blank'><h6>" + json.articles[i].title; 
+                results += "</h6><img src='" + json.articles[i].image +"' class = 'img-fluid'></a>"
+                results += "</div>"
             }
             document.getElementById('newPage').innerHTML = results; 
         })
