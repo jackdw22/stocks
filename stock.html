@@ -33,13 +33,28 @@
       </nav>
 
       <div class="container mt-2">
-        <div class = "col-4">
+        <div>
           <form>
             <p>Enter a symbol: <input class="form-control autocomplete" type="search" id="symbolSearch"></p>
             <input type="submit" id="tSub">
           </form>
         </div>
-
+        <div class="row" style="overflow-x:auto;">
+          <table class="table table-hover table-striped table-bordered mt-2">
+            <tbody id="watchList">
+            <tr>
+              <th>Name</th>
+              <th>Symbol</th>
+              <th>Price</th>
+              <th>Bid</th>
+              <th>Ask</th>
+              <th>Size</th>
+              <th>Previous Close</th>
+              <th>Market Cap</th>
+            </tr>
+            <tbody>
+          </table>
+        </div>
 
       </div>
 
