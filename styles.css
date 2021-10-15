@@ -3,6 +3,7 @@ html, body{
     margin:0; 
     padding: 0;
     height: 100%;
+    color: black; 
 }
 
 body{
@@ -11,6 +12,7 @@ body{
 
 h2, h1, h3 {
     text-align: center;
+    color: #0d6efd;
     
 }
 
@@ -38,3 +40,66 @@ h3{
 h1{
     padding: 15px 0; 
 }
+
+#watchlist{
+    background-color: #0d6efd;
+    color: white;
+}
+
+#watchlist h3{
+    color: white; 
+}
+
+#searchBar{
+    padding-top: 20px; 
+    margin: 0 auto; 
+    text-align: center;
+}
+
+#search2{
+    width: 60%; 
+}
+
+#submit2 button{
+    width: 10px; 
+    background-color:rgb(55, 156, 245); 
+}
+
+#submit2 button:hover{
+    background-color: rgb(55, 156, 245);
+    color: white; 
+}
+
+
+.article{
+    padding: 4% 0; 
+    background-color: #f8f8f8;
+    margin: 3% 0; 
+    
+}
+
+.article h6{
+    padding-bottom: 2%;
+    padding-left: 2%; 
+    color: black;
+}
+
+footer{
+    background-color: #0d6efd;
+    height: 10%; 
+    color: white;
+    text-align: center;
+    padding-top: 3%; 
+}
+
+
+@media (min-width: 700px){
+
+   .container{
+       background-color: white;
+       padding: 0; 
+   }
+   .article h6{
+       font-size: 30px ;
+   }
+  }
