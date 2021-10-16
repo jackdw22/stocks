@@ -291,8 +291,6 @@ function addCurrency(curr){
 
 function addStock(stock){
 
-  console.log(stock);
-
   let row = document.createElement('tr');
   let data = document.createElement('TD');
   //Name
